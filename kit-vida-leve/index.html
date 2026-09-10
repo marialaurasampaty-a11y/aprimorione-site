@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}
+  (window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1631913215099531');
+  fbq('track', 'PageView');
+</script>
+
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1631913215099531&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Kit Vida Leve — Método Folha Certa. Imprima apenas a folha que você precisa agora e organize rotina, casa, pendências ou dinheiro. Pagamento único de R$ 29,90.">
@@ -240,7 +262,7 @@
     <div class="hero-bottom center">
       <div class="pay-once">Pagamento único</div>
       <div class="hero-price">Por apenas R$ 29,90</div>
-      <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn btn-pulse">Quero deixar minha vida mais leve</a>
+      <a href="https://pay.cakto.com.br/927srvg_1095254" class="btn btn-pulse">Quero deixar minha vida mais leve</a>
     </div>
   </div>
 </section>
@@ -316,7 +338,7 @@
     </div>
   </div>
   <div class="container center" style="margin-top:30px;margin-bottom:-30px;">
-    <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn">Quero esses materiais por R$ 29,90</a>
+    <a href="https://pay.cakto.com.br/927srvg_1095254" class="btn">Quero esses materiais por R$ 29,90</a>
   </div>
 </section>
 
@@ -388,7 +410,7 @@
     </div>
 
     <div class="center" style="margin-top:20px;">
-      <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn">Quero o Kit Vida Leve</a>
+      <a href="https://pay.cakto.com.br/927srvg_1095254" class="btn">Quero o Kit Vida Leve</a>
     </div>
   </div>
 </section>
@@ -461,7 +483,7 @@
       <div class="price-label">Tudo por apenas</div>
       <div class="price-new">R$ 29,90</div>
       <div class="pay-note">Pagamento único</div>
-      <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn btn-pulse" style="width:100%;margin-top:10px;">Quero meu Kit Vida Leve</a>
+      <a href="https://pay.cakto.com.br/927srvg_1095254" class="btn btn-pulse" style="width:100%;margin-top:10px;">Quero meu Kit Vida Leve</a>
       <p style="margin-top:16px;font-size:13px;opacity:.6;">Pagamento 100% seguro</p>
       <p style="margin-top:6px;font-size:13px;opacity:.6;">🔒 Acesso vitalício + atualizações</p>
     </div>
@@ -502,7 +524,7 @@
       </details>
     </div>
     <div class="center" style="margin-top:34px;">
-      <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn">Ainda dá tempo — quero o kit</a>
+      <a href="https://pay.cakto.com.br/927srvg_1095254" class="btn">Ainda dá tempo — quero o kit</a>
     </div>
   </div>
 </section>
@@ -524,7 +546,7 @@
       <h3>Kit Vida Leve</h3>
       <p style="opacity:.9;margin-bottom:4px;">Acesso imediato aos arquivos para imprimir.</p>
       <p style="opacity:.9;margin-bottom:18px;">Pagamento único de <b>R$ 29,90</b>.</p>
-      <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn" style="background:var(--gold);">Quero tirar as tarefas da cabeça</a>
+      <a href="https://pay.cakto.com.br/927srvg_1095254" class="btn" style="background:var(--gold);">Quero tirar as tarefas da cabeça</a>
     </div>
 
     <p class="fine-print">Consulte no checkout as condições de garantia e reembolso aplicáveis à sua compra.</p>
@@ -539,8 +561,18 @@
 <!-- BARRA FIXA MOBILE -->
 <div class="sticky-cta">
   <div class="sc-price"><small>Pagamento único</small><b>R$ 29,90</b></div>
-  <a href="https://pay.hotmart.com/SEU-LINK-AQUI" class="btn">Quero o Kit Vida Leve</a>
+  <a href="https://pay.cakto.com.br/927srvg_1095254" class="btn">Quero o Kit Vida Leve</a>
 </div>
 
+
+<script>
+  // Dispara InitiateCheckout ao clicar em qualquer botao de compra
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href*="pay.cakto.com.br"]');
+    if(a && typeof fbq === 'function'){
+      fbq('track', 'InitiateCheckout', {value: 29.90, currency: 'BRL'});
+    }
+  });
+</script>
 </body>
 </html>
